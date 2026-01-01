@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOBA ZOO</title>
+    <link rel="stylesheet" href="./style/variables.css" />
+    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" type="image/png" href="./image/favicon.png" />
+  </head>
+
+  <body>
+    <canvas id="snow-canvas"></canvas>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo"><a href="#">BOBA ZOO</a></div>
+        <button class="burger" id="burger">☰</button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#accordion">О нас</a></li>
+            <li><a href="#accordion">Доставка</a></li>
+            <li><a href="#accordion">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="cart-button">
+          Корзина <span class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+    <div class="cart" id="cart">
+      <div class="cart-handle"></div>
+      <div class="bottom-bar">
+        <div class="total">Итого: <span id="total-amount">0 ₽</span></div>
+        <button id="checkout">Оформить</button>
+      </div>
+      <button class="cart-close" aria-label="Закрыть корзину">×</button>
+      <div class="container">
+        <h2>Корзина</h2>
+        <ul class="cart-items"></ul>
+        <div class="cart-summary">
+          <span class="cart-total">Итого: 0 ₽</span>
+          <button class="checkout-button">Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar" id="bottom-bar">
+      <div class="bottom-bar__info">
+        <span id="bottom-count">0</span> напитков ·
+        <span id="bottom-total">0 ₽</span>
+      </div>
+      <button class="bottom-bar__btn">Оформить</button>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>BOBA ZOO</h1>
+        <p>Эстетичные напитки с милыми зверятами</p>
+        <a href="#menu" class="hero-button">Заказать сейчас</a>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <!-- Menu Slider -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2>Меню</h2>
+        <div class="menu-slider">
+          <button class="slider-btn slider-btn--left" aria-label="Назад">
+            ←
+          </button>
+          <div class="menu-track">
+            <article class="drink-card" data-character="cat">
+              <div class="drink-image">
+                <div class="mascot-pattern mascot-cat" data-word="CAT"></div>
+              </div>
+              <h3 class="drink-title">Молочный кот</h3>
+              <p class="drink-description">Нежный, сливочный, на расслабоне</p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+
+            <article class="drink-card" data-character="bunny">
+              <div class="drink-image">
+                <div
+                  class="mascot-pattern mascot-bunny"
+                  data-word="BUNNY"
+                ></div>
+              </div>
+              <h3 class="drink-title">Грушевый зайка</h3>
+              <p class="drink-description">Игривый, сладкий, шустрый</p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+
+            <article class="drink-card" data-character="dog">
+              <div class="drink-image">
+                <div class="mascot-pattern mascot-dog" data-word="DOG"></div>
+              </div>
+              <h3 class="drink-title">Леденцовый пёсик</h3>
+              <p class="drink-description">Наивный, добродушный, милый</p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+
+            <article class="drink-card" data-character="panda">
+              <div class="drink-image">
+                <div
+                  class="mascot-pattern mascot-panda"
+                  data-word="PANDA"
+                ></div>
+              </div>
+              <h3 class="drink-title">Лавандовая панда</h3>
+              <p class="drink-description">Ленивая, добрая, наивная</p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+
+            <article class="drink-card" data-character="beer">
+              <div class="drink-image">
+                <div class="mascot-pattern mascot-beer" data-word="BEER"></div>
+              </div>
+              <h3 class="drink-title">Клубничный мишка</h3>
+              <p class="drink-description">Активный, щедрый, очаровательный</p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+
+            <article class="drink-card" data-character="raccoon">
+              <div class="drink-image">
+                <div
+                  class="mascot-pattern mascot-raccoon"
+                  data-word="RACCOON"
+                ></div>
+              </div>
+              <h3 class="drink-title">Черничный енот</h3>
+              <p class="drink-description">
+                Любознательный, свой парень в любой компании
+              </p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+
+            <article class="drink-card" data-character="sparrow">
+              <div class="drink-image">
+                <div
+                  class="mascot-pattern mascot-sparrow"
+                  data-word="SPARROW"
+                ></div>
+              </div>
+              <h3 class="drink-title">Миндальный воробей</h3>
+              <p class="drink-description">Быстрый, но всегда не успевает</p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+
+            <article class="drink-card" data-character="fox">
+              <div class="drink-image">
+                <div class="mascot-pattern mascot-fox" data-word="FOX"></div>
+              </div>
+              <h3 class="drink-title">Матча лис</h3>
+              <p class="drink-description">Безобидный и всегда за экологию</p>
+              <div class="drink-footer">
+                <span class="drink-price">350 ₽</span>
+                <button class="add-to-cart">В корзину</button>
+              </div>
+            </article>
+          </div>
+          <button class="slider-btn slider-btn--right" aria-label="Вперёд">
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="accordion" id="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">🐱 О нас</button>
+            <div class="accordion-content">
+              <p>
+                BOBA ZOO — это бабл-ти с характером. Эстетичные напитки, милые
+                зверята и вайб, который хочется фоткать и пить.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item" id="accordion">
+            <button class="accordion-header">🐰 Доставка</button>
+            <div class="accordion-content">
+              <p>
+                Работаем в Санкт-Петербурге.<br />
+                Самовывоз и доставка — уточняйте при заказе.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item" id="accordion">
+            <button class="accordion-header">🐶 Контакты</button>
+            <div class="accordion-content">
+              <p>
+                📍 ТЦ «Атмосфера», СПб<br />
+                📞 +7 (911) 000-00-00<br />
+                ✉️ info@bobazoo.ru
+              </p>
+            </div>
+          </div>
+
+          <!-- Соцсети -->
+          <div class="accordion-item" id="accordion">
+            <button class="accordion-header">🌐 Мы в соцсетях</button>
+            <div class="accordion-content socials-content">
+              <a href="#">Instagram</a>
+              <a href="#">TikTok</a>
+              <a href="#">VK</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-copy">© 2025 BOBA ZOO by SeRg1Y</p>
+      </div>
+    </footer>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>

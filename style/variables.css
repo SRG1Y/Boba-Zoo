@@ -1,0 +1,19 @@
+:root {
+  --bg-main: #fff7f0;
+  --bg-card: #ffffff;
+  --bg-accent: #ffe6d6;
+  --text-main: #2b2b2b;
+  --text-muted: #7a7a7a;
+  --accent: #ff8a5c;
+  --accent-soft: #ffd2bf;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 14px 40px rgba(0, 0, 0, 0.12);
+  --transition: 0.25s ease;
+  --cat: #7c6cff;
+  --dog: #ff7a9c;
+  --bunny: #4ccf9e;
+  --bear: #ffb24c;
+}
